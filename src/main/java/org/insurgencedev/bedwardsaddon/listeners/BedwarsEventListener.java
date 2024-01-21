@@ -13,26 +13,26 @@ public final class BedwarsEventListener implements Listener {
 
     @EventHandler
     public void onReceive(PlayerXpGainEvent event) {
-        String type = "Xp";
+        String type = "XP";
         final String NAMESPACE = "BEDWARS";
         double totalMulti = 1;
         Player player = event.getPlayer();
 
         IBoostersPlayerCache.BoosterFindResult pResult = IBoosterAPI.getCache(player).findActiveBooster(type, NAMESPACE);
         if (pResult instanceof IBoostersPlayerCache.BoosterFindResult.Success boosterResult) {
-            totalMulti += getMulti(boosterResult.getBooster().getMultiplier());
+            totalMulti += boosterResult.getBooster().getMultiplier();
         }
 
         GlobalBoosterManager.BoosterFindResult gResult = IBoosterAPI.getGlobalBoosterManager().findBooster(type, NAMESPACE);
         if (gResult instanceof GlobalBoosterManager.BoosterFindResult.Success boosterResult) {
-            totalMulti += getMulti(boosterResult.getBooster().getMultiplier());
+            totalMulti += boosterResult.getBooster().getMultiplier();
         }
 
-        int amount = (int) ((event.getAmount() * totalMulti) - event.getAmount());
+        int amount = (int) (calculateAmount(event.getAmount(), totalMulti) - event.getAmount());
         BedWars.getAPI().getLevelsUtil().addXp(player, amount, PlayerXpGainEvent.XpSource.OTHER);
     }
 
-    private double getMulti(double amount) {
-        return (amount >= 1) ? amount - 1 : amount;
+    private long calculateAmount(double amount, double multi) {
+        return (long) (amount * (multi < 1 ? 1 + multi : multi));
     }
 }
