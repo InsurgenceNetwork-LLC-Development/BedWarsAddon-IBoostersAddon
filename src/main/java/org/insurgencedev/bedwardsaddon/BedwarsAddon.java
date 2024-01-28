@@ -8,7 +8,7 @@ import org.insurgencedev.insurgenceboosters.api.addon.InsurgenceBoostersAddon;
 public class BedwarsAddon extends InsurgenceBoostersAddon {
 
     @Override
-    public void onAddonReloadablesStart() {
+    public void onAddonReloadAblesStart() {
         registerEvent(new BedwarsEventListener());
     }
 }
