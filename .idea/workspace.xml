@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a749a6e7-75ab-48fc-aa87-be5143b8fa1f" name="Changes" comment="updated multi handling" />
+    <list default="true" id="a749a6e7-75ab-48fc-aa87-be5143b8fa1f" name="Changes" comment="api jar update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705820145407</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="api jar update">
+      <option name="closed" value="true" />
+      <created>1706402150663</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706402150663</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -122,6 +130,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="java version issue" />
     <MESSAGE value="updated multi handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated multi handling" />
+    <MESSAGE value="api jar update" />
+    <option name="LAST_COMMIT_MESSAGE" value="api jar update" />
   </component>
 </project>
